@@ -6,11 +6,23 @@ import org.openqa.selenium.logging.LogType;
 public class Demo {
 
     public static void main(String[] args) {
-        System.out.println("Demo1");
-        WebDriver driver;
+        WebDriver driver = initializeFireFoxDriver();
+        launchURL(driver);
+        getTitle(driver);
+
+    }
+
+    public static FirefoxDriver initializeFireFoxDriver() {
         WebDriverManager.firefoxdriver().setup();
-        driver = new FirefoxDriver();
+        return new FirefoxDriver();
+    }
+
+    public static void launchURL(WebDriver driver) {
         driver.get("https://www.amazon.com/");
-        driver.manage().logs().get(LogType.BROWSER);
+    }
+
+    public static void getTitle(WebDriver driver) {
+        String title = driver.getTitle();
+        System.out.println("Title of the Page = " + title);
     }
 }
