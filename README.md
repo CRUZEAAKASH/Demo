@@ -1,1 +1,1 @@
-# Demo Project for practising different Selnium Techniques
+# Project for practising different Selnium Techniques
