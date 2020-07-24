@@ -17,7 +17,6 @@ public class Amazon {
 
 
     public static void amazonOperations(WebDriver driver) {
-        //By customized css selector. Using "Tagname#Id"
         driver.findElement(By.cssSelector("#twotabsearchtextbox")).sendKeys("a thousand splendid suns");
         driver.findElement(By.cssSelector("#twotabsearchtextbox")).sendKeys(Keys.ARROW_DOWN);
         driver.findElement(By.cssSelector("#twotabsearchtextbox")).sendKeys(Keys.ENTER);
