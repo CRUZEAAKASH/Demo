@@ -16,7 +16,7 @@ public class Demo {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         Demo.launchURL(driver);
         Demo.getTitle(driver);
-        Demo.searchElement(driver);
+        Demo.amazonOperations(driver);
 
     }
 
@@ -45,7 +45,7 @@ public class Demo {
         System.out.println("Title of the Page = " + title);
     }
 
-    public static void searchElement(WebDriver driver) {
+    public static void amazonOperations(WebDriver driver) {
         //By customized css selector. Using "Tagname#Id"
         driver.findElement(By.cssSelector("#twotabsearchtextbox")).sendKeys("a thousand splendid suns");
         driver.findElement(By.cssSelector("#twotabsearchtextbox")).sendKeys(Keys.ARROW_DOWN);
