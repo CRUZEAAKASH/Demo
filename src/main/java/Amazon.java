@@ -13,6 +13,7 @@ public class Amazon {
         BaseClass.launchURL(driver, "https://www.amazon.com/");
         BaseClass.getTitle(driver);
         Amazon.amazonOperations(driver);
+        driver.quit();
     }
 
 
