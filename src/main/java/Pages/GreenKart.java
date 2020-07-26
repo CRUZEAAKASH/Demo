@@ -4,17 +4,23 @@ import CommomUtil.BaseClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
+
+import static java.lang.System.exit;
 
 public class GreenKart {
+
 
     public static void main(String[] args) throws InterruptedException {
         BaseClass baseClass = new BaseClass();
         WebDriver driver = baseClass.initalizeDriver("Chrome");
+
         baseClass.launchURL(driver, "https://rahulshettyacademy.com/seleniumPractise");
         baseClass.getTitle(driver);
         greenKartOperation(driver);
@@ -23,7 +29,7 @@ public class GreenKart {
     }
 
     public static void greenKartOperation(WebDriver driver) throws InterruptedException {
-        String[] itemsNeeded = {"Cucumber", "Brocolli"};
+        String[] itemsNeeded = {"Cucumber", "Brocolli", "Beetroot"};
         //List itemsNeededList = Arrays.asList(itemsNeeded);
         List<String> itemsNeededList = new LinkedList<>(Arrays.asList(itemsNeeded));
         List<WebElement> products = driver.findElements(By.cssSelector("h4.product-name"));
@@ -38,5 +44,32 @@ public class GreenKart {
                 }
             }
         }
+        driver.findElement(By.cssSelector("a.cart-icon")).click();
+        driver.findElement(By.xpath("//div[@class='action-block']/button")).click();
+        driver.findElement(By.className("promoCode")).clear();
+        driver.findElement(By.className("promoCode")).sendKeys("rahulshettyacademy");
+        driver.findElement(By.className("promoBtn")).click();
+
+        String promoText = driver.findElement(By.className("promoInfo")).getText();
+        if (promoText.equals("Code applied ..!")) {
+            System.out.println("True");
+        } else {
+            exit(1);
+        }
+
+        //Click on place Order
+        WebDriverWait wait = new WebDriverWait(driver, 20);
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@class='promoWrapper']/parent::div/button")));
+        driver.findElement(By.xpath("//*[@class='promoWrapper']/parent::div/button")).click();
+
+        Select select = new Select(driver.findElement(By.xpath("//select")));
+        select.selectByVisibleText("India");
+
+        //Select checkbox
+        driver.findElement(By.className("chkAgree")).click();
+
+        Thread.sleep(3000);
+        //Click on Proceed
+        driver.findElement(By.xpath("//button")).click();
     }
 }
