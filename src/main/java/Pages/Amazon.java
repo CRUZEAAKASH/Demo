@@ -1,26 +1,26 @@
+package Pages;
+
 import CommomUtil.BaseClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
-import java.util.concurrent.TimeUnit;
-
 public class Amazon {
 
     public static void main(String[] args) {
-        WebDriver driver = BaseClass.initalizeDriver("Chrome");
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        BaseClass.launchURL(driver, "https://www.amazon.com/");
-        BaseClass.getTitle(driver);
+        BaseClass baseClass = new BaseClass();
+        WebDriver driver = baseClass.initalizeDriver("Chrome");
+        baseClass.launchURL(driver, "https://www.amazon.com/");
+        baseClass.getTitle(driver);
         Amazon.amazonOperations(driver);
-        driver.quit();
+        baseClass.tearDownDriver(driver);
     }
 
 
-    public static void amazonOperations(WebDriver driver) {
+    private static void amazonOperations(WebDriver driver) {
         driver.findElement(By.cssSelector("#twotabsearchtextbox")).sendKeys("a thousand splendid suns");
         driver.findElement(By.cssSelector("#twotabsearchtextbox")).sendKeys(Keys.ARROW_DOWN);
-        driver.findElement(By.cssSelector("#twotabsearchtextbox")).sendKeys(Keys.ENTER);
+        driver.findElement(By.cssSelector("#twotabsearchtextbox")).submit();
         driver.findElement(By.xpath("(//div[@class='a-section aok-relative s-image-fixed-height']/img)[1]")).click();
         driver.findElement(By.cssSelector("#add-to-cart-button")).click();
         driver.findElement(By.cssSelector("a#hlb-ptc-btn-native")).click();
