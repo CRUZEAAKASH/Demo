@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1502cb43-a216-44db-9b4a-56872b86d476" name="Default Changelist" comment="Formatted the code">
+      <change afterPath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/GreenKart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Runner/GoogleTestRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ThreadClass/GoogleFeatureThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Amazon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/Amazon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CommomUtil/BaseClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CommomUtil/BaseClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GreenKart.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1enYlTUoqNV7W1YN1SVBdNvKUsP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/IntelliJWorkspace/common_automation_template" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.EditorConfig" />
+  </component>
+  <component name="RunManager" selected="Application.GreenKart">
+    <configuration name="Amazon" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Pages.Amazon" />
+      <module name="Demonstration" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GoogleFeatureThread" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ThreadClass.GoogleFeatureThread" />
+      <module name="Demonstration" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ThreadClass.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GoogleTestRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Runner.GoogleTestRunner" />
+      <module name="Demonstration" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Runner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GreenKart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Pages.GreenKart" />
+      <module name="Demonstration" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Amazon" />
+      <item itemvalue="Application.GoogleFeatureThread" />
+      <item itemvalue="Application.GoogleTestRunner" />
+      <item itemvalue="Application.GreenKart" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.GreenKart" />
+        <item itemvalue="Application.Amazon" />
+        <item itemvalue="Application.GoogleTestRunner" />
+        <item itemvalue="Application.GoogleFeatureThread" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1502cb43-a216-44db-9b4a-56872b86d476" name="Default Changelist" comment="" />
+      <created>1594958974897</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1594958974897</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Added first fil">
+      <created>1594959616439</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1594959616440</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added first fil">
+      <created>1594959631965</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1594959631965</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added first file">
+      <created>1594959648704</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1594959648704</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Formatted the code">
+      <created>1594960478253</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1594960478253</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added first fil" />
+    <MESSAGE value="Added first file" />
+    <MESSAGE value="Formatted the code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Formatted the code" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="163" y="0" key="#Project_Structure" timestamp="1595701779644">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="163" y="0" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1595701779644" />
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595701599401">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1595701599401" />
+    <state x="488" y="80" key="#com.intellij.ide.util.MemberChooser" timestamp="1595699592524">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="488" y="80" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1595699592524" />
+    <state x="434" y="154" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1595701618809">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="434" y="154" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1595701618808" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1595215937490">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1595215937490" />
+    <state width="1323" height="343" key="GridCell.Tab.0.bottom" timestamp="1595739086873">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="343" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595739086873" />
+    <state width="1323" height="343" key="GridCell.Tab.0.center" timestamp="1595739086871">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="343" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1595739086871" />
+    <state width="1323" height="343" key="GridCell.Tab.0.left" timestamp="1595739086869">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="343" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1595739086869" />
+    <state width="1323" height="343" key="GridCell.Tab.0.right" timestamp="1595739086871">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="343" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595739086871" />
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1595570845500">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595570845500" />
+    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1595570845500">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1595570845500" />
+    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1595570845500">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1595570845500" />
+    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1595570845500">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1595570845500" />
+    <state x="184" y="0" key="SettingsEditor" timestamp="1595701624206">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1595701624206" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1594960503575">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1594960503575" />
+    <state x="390" y="97" width="585" height="534" key="find.popup" timestamp="1595700326201">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="390" y="97" width="585" height="534" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1595700326201" />
+  </component>
+</project>
