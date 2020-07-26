@@ -6,30 +6,39 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
+import java.util.concurrent.TimeUnit;
+
 public class BaseClass {
 
-    public static WebDriver initalizeDriver(String browser) {
+    private WebDriver driver;
+
+    public WebDriver initalizeDriver(String browser) {
         if (browser.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
-            return new ChromeDriver();
+            driver = new ChromeDriver();
         } else if (browser.equalsIgnoreCase("firefox")) {
             WebDriverManager.firefoxdriver().setup();
-            return new FirefoxDriver();
+            driver = new FirefoxDriver();
         } else if (browser.equalsIgnoreCase("ie") || browser.equalsIgnoreCase("internet explorer")) {
             WebDriverManager.iedriver().setup();
-            return new InternetExplorerDriver();
+            driver = new InternetExplorerDriver();
         }
-        return null;
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        return driver;
     }
 
-    public static void launchURL(WebDriver driver, String url) {
+    public void launchURL(WebDriver driver, String url) {
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
         driver.get(url);
     }
 
-    public static void getTitle(WebDriver driver) {
+    public void getTitle(WebDriver driver) {
         String title = driver.getTitle();
         System.out.println("Title of the Page = " + title);
+    }
+
+    public void tearDownDriver(WebDriver driver) {
+        driver.quit();
     }
 }
