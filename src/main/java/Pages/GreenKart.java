@@ -16,8 +16,7 @@ import static java.lang.System.exit;
 
 public class GreenKart {
 
-
-    public static void main(String[] args) throws InterruptedException{
+    public static void startGreenKart() throws InterruptedException {
         BaseClass baseClass = new BaseClass();
         WebDriver driver = baseClass.initializeDriver("chrome");
         baseClass.launchURL(driver, "https://rahulshettyacademy.com/seleniumPractise");
