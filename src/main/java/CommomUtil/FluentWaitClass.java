@@ -16,7 +16,7 @@ public class FluentWaitClass {
 
     public static void main(String[] args) {
         BaseClass baseClass = new BaseClass();
-        WebDriver driver = baseClass.initalizeDriver("Chrome");
+        WebDriver driver = baseClass.initializeDriver("Chrome");
         baseClass.launchURL(driver, "https://the-internet.herokuapp.com/dynamic_loading/1");
         driver.findElement(By.xpath("//*[@id='start']/button")).click();
 

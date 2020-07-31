@@ -9,7 +9,7 @@ public class Amazon {
 
     public static void main(String[] args) {
         BaseClass baseClass = new BaseClass();
-        WebDriver driver = baseClass.initalizeDriver("Chrome");
+        WebDriver driver = baseClass.initializeDriver("Chrome");
         baseClass.launchURL(driver, "https://www.amazon.com/");
         baseClass.getTitle(driver);
         Amazon.amazonOperations(driver);

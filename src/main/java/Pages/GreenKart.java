@@ -1,6 +1,7 @@
 package Pages;
 
 import CommomUtil.BaseClass;
+import CommomUtil.SeleniumGrid;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.net.MalformedURLException;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
@@ -17,10 +19,9 @@ import static java.lang.System.exit;
 public class GreenKart {
 
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException, MalformedURLException {
         BaseClass baseClass = new BaseClass();
-        WebDriver driver = baseClass.initalizeDriver("Chrome");
-
+        WebDriver driver = baseClass.initializeDriver("chrome");
         baseClass.launchURL(driver, "https://rahulshettyacademy.com/seleniumPractise");
         baseClass.getTitle(driver);
         greenKartOperation(driver);
@@ -29,7 +30,7 @@ public class GreenKart {
     }
 
     public static void greenKartOperation(WebDriver driver) throws InterruptedException {
-        String[] itemsNeeded = {"Cucumber", "Brocolli", "Beetroot"};
+        String[] itemsNeeded = {"Cucumber", "Broccoli", "Beetroot"};
         //List itemsNeededList = Arrays.asList(itemsNeeded);
         List<String> itemsNeededList = new LinkedList<>(Arrays.asList(itemsNeeded));
         List<WebElement> products = driver.findElements(By.cssSelector("h4.product-name"));
