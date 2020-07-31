@@ -10,7 +10,7 @@
         <classes>
             <class name="GreenKartTest">
                 <methods>
-                    <exclude name="greenKartTest"></exclude>
+                    <exclude name="greenKartTestToBeExcluded"></exclude>
                 </methods>
             </class>
         </classes>
