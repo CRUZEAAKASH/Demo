@@ -1,22 +1,21 @@
 package Pages;
 
-import CommomUtil.BaseClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
 public class AmazonPages {
 
-    public static void startAmazon() {
-        BaseClass baseClass = new BaseClass();
-        WebDriver driver = baseClass.initializeDriver("Chrome");
-        baseClass.launchURL(driver, "https://www.amazon.com/");
-        baseClass.getTitle(driver);
-        AmazonPages.amazonOperations(driver);
-        baseClass.tearDownDriver(driver);
-    }
+//    private static void startAmazon() {
+////        BaseClass baseClass = new BaseClass();
+////        WebDriver driver = baseClass.initializeDriver("Chrome");
+////        baseClass.launchURL(driver, "https://www.amazon.com/");
+////        baseClass.getTitle(driver);
+////        AmazonPages.amazonOperations(driver);
+////        baseClass.tearDownDriver(driver);
+////    }
 
-    private static void amazonOperations(WebDriver driver) {
+    public static void amazonOperations(WebDriver driver) {
         driver.findElement(By.cssSelector("#twotabsearchtextbox")).sendKeys("a thousand splendid suns");
         driver.findElement(By.cssSelector("#twotabsearchtextbox")).sendKeys(Keys.ARROW_DOWN);
         driver.findElement(By.cssSelector("#twotabsearchtextbox")).submit();
