@@ -1,5 +1,40 @@
 # Project for practising different Selenium Techniques
 
+## General Project Structure
+
+
+```
++---.idea
+|   \---libraries
++---bin
+|   +---.idea
+|   |   \---libraries
+|   +---src
+|   |   +---main
+|   |   |   \---java
+|   |   |       +---CommomUtil
+|   |   |       +---META-INF
+|   |   |       \---Pages
+|   |   \---test
+|   |       \---java
+|   \---target
+|       +---classes
+|       |   +---CommomUtil
+|       |   \---Pages
+|       \---generated-sources
+|           \---annotations
+\---src
+    +---main
+    |   \---java
+    |       +---CommomUtil
+    |       +---META-INF
+    |       \---Pages
+    \---test
+        \---java
+            +---Common
+            \---Tests
+```
+
 ## Things Used
 1. Different WebDriver Methods
 2. Different Locator Techniques
@@ -12,7 +47,10 @@
 
 ## TestNG
 1. Implemented TestNG.xml file to run different TestCases
-2. Implemented @BeforeTest/@Test/@AfterTest annotation to run the tests
+2. Implemented **@BeforeTest**/**@Test**/**@AfterTest** annotation to run the tests
 3. Implemented @DataProvider Annotation
 4. Implemented Parameterization mechanism where global values are passing from testng.xml to test methods
 5. Implemented TestNg Listener
+
+
+
