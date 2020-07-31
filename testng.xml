@@ -8,7 +8,11 @@
     </test> <!-- Test -->
     <test name="Green Kart TestNG xml">
         <classes>
-            <class name="GreenKartTest"/>
+            <class name="GreenKartTest">
+                <methods>
+                    <exclude name="greenKartTest"></exclude>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite> <!-- Suite -->
