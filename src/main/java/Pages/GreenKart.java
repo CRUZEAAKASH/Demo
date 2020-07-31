@@ -1,7 +1,6 @@
 package Pages;
 
 import CommomUtil.BaseClass;
-import CommomUtil.SeleniumGrid;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,7 +8,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.net.MalformedURLException;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
@@ -19,7 +17,7 @@ import static java.lang.System.exit;
 public class GreenKart {
 
 
-    public static void main(String[] args) throws InterruptedException, MalformedURLException {
+    public static void main(String[] args) throws InterruptedException{
         BaseClass baseClass = new BaseClass();
         WebDriver driver = baseClass.initializeDriver("chrome");
         baseClass.launchURL(driver, "https://rahulshettyacademy.com/seleniumPractise");

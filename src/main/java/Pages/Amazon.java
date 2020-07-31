@@ -16,7 +16,6 @@ public class Amazon {
         baseClass.tearDownDriver(driver);
     }
 
-
     private static void amazonOperations(WebDriver driver) {
         driver.findElement(By.cssSelector("#twotabsearchtextbox")).sendKeys("a thousand splendid suns");
         driver.findElement(By.cssSelector("#twotabsearchtextbox")).sendKeys(Keys.ARROW_DOWN);
@@ -27,6 +26,5 @@ public class Amazon {
         driver.findElement(By.cssSelector("input#ap_email")).sendKeys("abc@gmail.com");
         driver.findElement(By.cssSelector("#continue")).click();
         driver.findElement(By.cssSelector("#ap_password")).sendKeys("12345679");
-
     }
 }
