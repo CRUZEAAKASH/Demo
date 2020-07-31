@@ -1,3 +1,5 @@
+package Tests;
+
 import CommomUtil.BaseClass;
 import Pages.AmazonPages;
 import org.openqa.selenium.WebDriver;

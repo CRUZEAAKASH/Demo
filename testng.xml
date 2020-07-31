@@ -4,12 +4,12 @@
     <parameter name="browser" value="chrome"></parameter>
     <test thread-count="5" name="Amazon TestNG xml">
         <classes>
-            <class name="AmazonTest"/>
+            <class name="Tests.AmazonTest"/>
         </classes>
     </test> <!-- Test -->
     <test name="Green Kart TestNG xml">
         <classes>
-            <class name="GreenKartTest">
+            <class name="Tests.GreenKartTest">
                 <methods>
                     <exclude name=".*Excluded"></exclude>
                 </methods>
