@@ -1,6 +1,6 @@
 # Project for practising different Selenium Techniques
 
-##Things Used
+## Things Used
 1. Different WebDriver Methods
 2. Different Locator Techniques
 3. Use of Implicit and Explicit Wait 
@@ -10,7 +10,7 @@
 7. Implementation of Fluent Wait -> Fluent Wait Class
 8. Implementation of UX Validations using Selenium Width/Height Method -> UXValidations Class
 
-##TestNG
+## TestNG
 1. Implemented TestNG.xml file to run different TestCases
 2. Implemented @BeforeTest/@Test/@AfterTest annotation to run the tests
 3. Implemented @DataProvider Annotation
