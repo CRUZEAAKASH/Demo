@@ -13,17 +13,17 @@ public class GreenKartTest {
 
     @Parameters({"browser"})
     @BeforeTest
-    public void settingupDriver(String browserName) {
+    public void settingUpDriver(String browserName) {
         baseClass = new BaseClass();
         driver = baseClass.initializeDriver(browserName);
     }
 
     @Test
-    public void greenKartTestToBeExcluded() throws InterruptedException {
+    public void greenKartTestToBeExcluded() {
         System.out.println("Dummy Code as this method will not be Executed");
     }
 
-    @Test
+    @Test(enabled = true)
     public void greenKartTest() throws InterruptedException {
         baseClass.launchURL(driver, "https://rahulshettyacademy.com/seleniumPractise");
         baseClass.getTitle(driver);
