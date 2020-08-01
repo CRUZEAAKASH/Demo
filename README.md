@@ -50,7 +50,9 @@
 2. Implemented **@BeforeTest**/**@Test**/**@AfterTest** annotation to run the tests
 3. Implemented @DataProvider Annotation
 4. Implemented Parameterization mechanism where global values are passing from testng.xml to test methods
-5. Implemented TestNg Listener
+5. Implemented TestNg Listener -> ITestListener
+6. Implemented Parallel Test Execution by Mentioning parallel thread count in testng.xml
+
 
 
 
