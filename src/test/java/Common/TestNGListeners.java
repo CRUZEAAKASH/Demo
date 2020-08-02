@@ -14,7 +14,7 @@ public class TestNGListeners implements ITestListener {
 
     @Override
     public void onTestSuccess(ITestResult result) {
-        System.out.println("I succesfully executed Listeners success pass code");
+        System.out.println("I successfully executed Listeners success pass code");
     }
 
     @Override
