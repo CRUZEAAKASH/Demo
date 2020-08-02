@@ -1,11 +1,11 @@
 package Tests;
 
 import CommomUtil.BaseClass;
+import Common.DataFromPropertiesFile;
 import Pages.GreenKart;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class GreenKartTest {
@@ -13,10 +13,14 @@ public class GreenKartTest {
     WebDriver driver;
     BaseClass baseClass;
 
-    @Parameters({"browser"})
+    /***
+     * Making an object of Base Class
+     * Getting value from data.properties file to invoke the particular browser
+     */
     @BeforeTest
-    public void settingUpDriver(String browserName) {
+    public void settingUpDriver() {
         baseClass = new BaseClass();
+        String browserName = DataFromPropertiesFile.getValueFromPropertyFile("browser");
         driver = baseClass.initializeDriver(browserName);
     }
 
