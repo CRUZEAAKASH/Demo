@@ -8,6 +8,8 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
+
 public class GreenKartTest {
 
     WebDriver driver;
@@ -18,7 +20,7 @@ public class GreenKartTest {
      * Getting value from data.properties file to invoke the particular browser
      */
     @BeforeTest
-    public void settingUpDriver() {
+    public void settingUpDriver() throws IOException {
         baseClass = new BaseClass();
         String browserName = DataFromPropertiesFile.getValueFromPropertyFile("browser");
         driver = baseClass.initializeDriver(browserName);
