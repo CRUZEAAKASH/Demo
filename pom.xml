@@ -26,6 +26,9 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
+                    <systemPropertyVariables>
+                        <browser>firefox</browser>
+                    </systemPropertyVariables>
                 </configuration>
             </plugin>
         </plugins>
