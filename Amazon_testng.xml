@@ -10,13 +10,4 @@
             <class name="Tests.AmazonTest"/>
         </classes>
     </test> <!-- Test -->
-    <test name="Green Kart TestNG xml">
-        <classes>
-            <class name="Tests.GreenKartTest">
-                <methods>
-                    <exclude name=".*Excluded"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
 </suite> <!-- Suite -->
