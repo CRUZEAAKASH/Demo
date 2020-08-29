@@ -90,6 +90,18 @@
             <scope>test</scope>
         </dependency>
 
+
+        <!-- Implemented below dependency to remove SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+         error-->
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.7.30</version>
+            <scope>test</scope>
+        </dependency>
+
+
     </dependencies>
 
 </project>
