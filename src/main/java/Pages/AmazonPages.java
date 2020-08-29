@@ -1,28 +1,58 @@
 package Pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import java.util.logging.Logger;
 
 public class AmazonPages {
 
-//    private static void startAmazon() {
-////        BaseClass baseClass = new BaseClass();
-////        WebDriver driver = baseClass.initializeDriver("Chrome");
-////        baseClass.launchURL(driver, "https://www.amazon.com/");
-////        baseClass.getTitle(driver);
-////        AmazonPages.amazonOperations(driver);
-////        baseClass.tearDownDriver(driver);
-////    }
+    @FindBy(css = "#twotabsearchtextbox")
+    private WebElement searchBox;
 
-    public static void amazonOperations(WebDriver driver) {
-        driver.findElement(By.cssSelector("#twotabsearchtextbox")).sendKeys("a thousand splendid suns");
-        driver.findElement(By.cssSelector("#twotabsearchtextbox")).sendKeys(Keys.ARROW_DOWN);
-        driver.findElement(By.cssSelector("#twotabsearchtextbox")).submit();
-        driver.findElement(By.xpath("(//div[@class='a-section aok-relative s-image-fixed-height']/img)[1]")).click();
-        driver.findElement(By.cssSelector("input#checkout-button")).click();
-        driver.findElement(By.cssSelector("input#ap_email")).sendKeys("abc@gmail.com");
-        driver.findElement(By.cssSelector("#continue")).click();
-        driver.findElement(By.cssSelector("#ap_password")).sendKeys("12345679");
+    @FindBy(xpath = "(//div[@class='a-section aok-relative s-image-fixed-height']/img)[1]")
+    private WebElement selectItem;
+
+    @FindBy(css = "input#checkout-button")
+    private WebElement checkOutButton;
+
+    @FindBy(css = "input#ap_email")
+    private WebElement loginEmail;
+
+    @FindBy(css = "#continue")
+    private WebElement continueButton;
+
+    @FindBy(css = "#ap_password")
+    private WebElement password;
+
+    private WebDriver driver;
+
+    private final Logger logger = Logger.getLogger(AmazonPages.class.getName());
+
+    public AmazonPages(WebDriver driver) {
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
+    }
+
+    public void amazonOperations(WebDriver driver) {
+        searchBox.sendKeys("a thousand splendid suns");
+        logger.info("Entered text in the textBox");
+        searchBox.sendKeys(Keys.ARROW_DOWN);
+        logger.info("Press down keys");
+        searchBox.submit();
+        logger.info("Click the submit button");
+        selectItem.click();
+        logger.info("Clicked on button");
+        checkOutButton.click();
+        logger.info("Clicked on Checkout Button");
+        loginEmail.sendKeys("abc@gmail.com");
+        logger.info("Sent Email Id");
+        continueButton.click();
+        logger.info("Clicked on Continue button");
+        password.sendKeys("12345679");
+        logger.info("Some random password sent");
     }
 }

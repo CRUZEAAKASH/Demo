@@ -9,19 +9,21 @@ public class AmazonTest {
 
     WebDriver driver;
     BaseClass baseClass;
+    AmazonPages amazonPages;
 
     @Parameters({"browser"})
     @BeforeTest
     public void settingUpDriver(String browserName) {
         baseClass = new BaseClass();
         driver = baseClass.initializeDriver(browserName);
+        amazonPages = new AmazonPages(driver);
     }
 
     @Test(dataProvider = "getDataMethod")
     public void amazonTest(String URL) {
         baseClass.launchURL(driver, URL);
         baseClass.getTitle(driver);
-        AmazonPages.amazonOperations(driver);
+        amazonPages.amazonOperations(driver);
 
     }
 
