@@ -1,22 +1,30 @@
 package Tests;
 
 import CommomUtil.BaseClass;
+import Common.DataFromPropertiesFile;
 import PageObjects.QAClickAcademy.LandingPage;
 import PageObjects.QAClickAcademy.LoginPage;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
+
+import java.io.IOException;
 
 public class QAClickAcademyTest extends BaseClass {
 
     private WebDriver driver;
     private LandingPage landingPage;
     private LoginPage loginPage;
+    private String url = DataFromPropertiesFile.getValueFromPropertyFile("url_qaClickAcademy");
+
+    public QAClickAcademyTest() throws IOException {
+    }
 
     @Parameters({"browser"})
     @BeforeMethod
     public void setup(String browserName) {
         driver = initializeDriver(browserName);
-        launchURL(driver, "http://www.qaclickacademy.com/");
+
+        launchURL(driver, url);
         landingPage = new LandingPage(driver);
         loginPage = new LoginPage(driver);
     }

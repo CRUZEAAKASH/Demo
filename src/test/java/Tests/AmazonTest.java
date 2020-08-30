@@ -10,9 +10,10 @@ public class AmazonTest extends BaseClass {
     private WebDriver driver;
     private AmazonPages amazonPages;
 
-    @Parameters({"browser"})
+    //@Parameters({"browser"})
     @BeforeTest
-    public void settingUpDriver(String browserName) {
+    public void settingUpDriver() {
+        String browserName = System.getProperty("browser");
         driver = initializeDriver(browserName);
         amazonPages = new AmazonPages(driver);
     }
