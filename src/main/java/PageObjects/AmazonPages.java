@@ -1,12 +1,13 @@
 package PageObjects;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.util.logging.Logger;
 
 public class AmazonPages {
 
@@ -30,7 +31,7 @@ public class AmazonPages {
 
     private WebDriver driver;
 
-    private final Logger logger = Logger.getLogger(AmazonPages.class.getName());
+    private final Logger logger = LogManager.getLogger(AmazonPages.class.getName());
 
     public AmazonPages(WebDriver driver) {
         this.driver = driver;
@@ -39,7 +40,7 @@ public class AmazonPages {
 
     public void amazonOperations() {
         searchBox.sendKeys("a thousand splendid suns");
-        logger.info("Entered text in the textBox");
+        logger.debug("Entered text in the textBox");
         searchBox.sendKeys(Keys.ARROW_DOWN);
         logger.info("Press down keys");
         searchBox.submit();
