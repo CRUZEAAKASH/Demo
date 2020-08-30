@@ -14,19 +14,16 @@ public class QAClickAcademyTest extends BaseClass {
     private WebDriver driver;
     private LandingPage landingPage;
     private LoginPage loginPage;
-    private String url = DataFromPropertiesFile.getValueFromPropertyFile("url_qaClickAcademy");
-
-    public QAClickAcademyTest() throws IOException {
-    }
 
     @Parameters({"browser"})
     @BeforeMethod
-    public void setup(String browserName) {
+    public void setup(String browserName) throws IOException {
+        String url = DataFromPropertiesFile.getValueFromPropertyFile("url_qaClickAcademy");
         driver = initializeDriver(browserName);
-
         launchURL(driver, url);
         landingPage = new LandingPage(driver);
         loginPage = new LoginPage(driver);
+        System.out.println("Printing Before Method of QAClickAcademy");
     }
 
     @Test(dataProvider = "getDataMethod")

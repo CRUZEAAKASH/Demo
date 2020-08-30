@@ -24,6 +24,7 @@ public class GreenKartTest {
         baseClass = new BaseClass();
         String browserName = DataFromPropertiesFile.getValueFromPropertyFile("browser");
         driver = baseClass.initializeDriver(browserName);
+        System.out.println("Printing beforeTest method of GreenKart");
     }
 
     @Test
