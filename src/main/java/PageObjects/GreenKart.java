@@ -1,6 +1,5 @@
-package Pages;
+package PageObjects;
 
-import CommomUtil.BaseClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,16 +14,6 @@ import java.util.List;
 import static java.lang.System.exit;
 
 public class GreenKart {
-
-    public static void startGreenKart() throws InterruptedException {
-        BaseClass baseClass = new BaseClass();
-        WebDriver driver = baseClass.initializeDriver("chrome");
-        baseClass.launchURL(driver, "https://rahulshettyacademy.com/seleniumPractise");
-        baseClass.getTitle(driver);
-        greenKartOperation(driver);
-        Thread.sleep(2000);
-        baseClass.tearDownDriver(driver);
-    }
 
     public static void greenKartOperation(WebDriver driver) throws InterruptedException {
         String[] itemsNeeded = {"Cucumber", "Broccoli", "Beetroot"};

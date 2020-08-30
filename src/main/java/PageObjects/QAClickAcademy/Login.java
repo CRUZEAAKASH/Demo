@@ -1,2 +1,4 @@
-package PageObjects.QAClickAcademy;public class Login {
+package PageObjects.QAClickAcademy;
+
+public class Login {
 }

@@ -1,4 +1,4 @@
-package Pages;
+package PageObjects;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -37,7 +37,7 @@ public class AmazonPages {
         PageFactory.initElements(driver, this);
     }
 
-    public void amazonOperations(WebDriver driver) {
+    public void amazonOperations() {
         searchBox.sendKeys("a thousand splendid suns");
         logger.info("Entered text in the textBox");
         searchBox.sendKeys(Keys.ARROW_DOWN);

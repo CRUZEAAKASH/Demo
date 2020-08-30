@@ -1,20 +1,18 @@
 package Tests;
 
 import CommomUtil.BaseClass;
-import Pages.AmazonPages;
+import PageObjects.AmazonPages;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
 
 public class AmazonTest extends BaseClass {
 
-    WebDriver driver;
-    // BaseClass baseClass;
-    AmazonPages amazonPages;
+    private WebDriver driver;
+    private AmazonPages amazonPages;
 
     @Parameters({"browser"})
     @BeforeTest
     public void settingUpDriver(String browserName) {
-        //baseClass = new BaseClass();
         driver = initializeDriver(browserName);
         amazonPages = new AmazonPages(driver);
     }
@@ -23,8 +21,7 @@ public class AmazonTest extends BaseClass {
     public void amazonTest(String URL) {
         launchURL(driver, URL);
         getTitle(driver);
-        amazonPages.amazonOperations(driver);
-
+        amazonPages.amazonOperations();
     }
 
     @AfterTest
