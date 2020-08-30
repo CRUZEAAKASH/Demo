@@ -1,34 +1,33 @@
 package Tests;
 
 import CommomUtil.BaseClass;
-import Pages.AmazonPages;
+import PageObjects.AmazonPages;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
 
-public class AmazonTest {
+public class AmazonTest extends BaseClass {
 
-    WebDriver driver;
-    BaseClass baseClass;
+    private WebDriver driver;
+    private AmazonPages amazonPages;
 
     @Parameters({"browser"})
     @BeforeTest
     public void settingUpDriver(String browserName) {
-        baseClass = new BaseClass();
-        driver = baseClass.initializeDriver(browserName);
+        driver = initializeDriver(browserName);
+        amazonPages = new AmazonPages(driver);
     }
 
     @Test(dataProvider = "getDataMethod")
     public void amazonTest(String URL) {
-        baseClass.launchURL(driver, URL);
-        baseClass.getTitle(driver);
-        AmazonPages.amazonOperations(driver);
-
+        launchURL(driver, URL);
+        getTitle(driver);
+        amazonPages.amazonOperations();
     }
 
     @AfterTest
     public void tearDownDriver() {
         System.out.println("Executing Tear Down");
-        baseClass.tearDownDriver(driver);
+        tearDownDriver(driver);
     }
 
     @DataProvider

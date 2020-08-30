@@ -2,7 +2,7 @@ package Tests;
 
 import CommomUtil.BaseClass;
 import Common.DataFromPropertiesFile;
-import Pages.GreenKart;
+import PageObjects.GreenKart;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;

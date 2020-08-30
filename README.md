@@ -14,13 +14,13 @@
 |   |   |   \---java
 |   |   |       +---CommomUtil
 |   |   |       +---META-INF
-|   |   |       \---Pages
+|   |   |       \---PageObjects
 |   |   \---test
 |   |       \---java
 |   \---target
 |       +---classes
 |       |   +---CommomUtil
-|       |   \---Pages
+|       |   \---PageObjects
 |       \---generated-sources
 |           \---annotations
 \---src
@@ -28,7 +28,7 @@
     |   \---java
     |       +---CommomUtil
     |       +---META-INF
-    |       \---Pages
+    |       \---PageObjects
     \---test
         \---java
             +---Common
