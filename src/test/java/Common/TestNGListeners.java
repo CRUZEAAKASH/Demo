@@ -1,6 +1,9 @@
 package Common;
 
 import CommomUtil.ScreenShot;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -11,18 +14,25 @@ import java.io.IOException;
 // ITestListener interface which implements TestNGListeners
 public class TestNGListeners implements ITestListener {
 
+    ExtentReports extentReports = ExtentReportNG.getReportObject();
+    ExtentTest extentTest;
+
     @Override
     public void onTestStart(ITestResult result) {
+        extentTest = extentReports.createTest(result.getMethod().getMethodName());
 
     }
 
     @Override
     public void onTestSuccess(ITestResult result) {
         System.out.println("I successfully executed Listeners success pass code");
+        extentTest.log(Status.PASS, "Test Passed");
     }
 
     @Override
     public void onTestFailure(ITestResult result) {
+
+        extentTest.fail(result.getThrowable());
         System.out.println("Failed Test Method = " + result.getName());
         String testMethodName = result.getMethod().getMethodName();
 
@@ -39,6 +49,8 @@ public class TestNGListeners implements ITestListener {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+
     }
 
     @Override
@@ -80,6 +92,6 @@ public class TestNGListeners implements ITestListener {
      */
     @Override
     public void onFinish(ITestContext context) {
-
+        extentReports.flush();
     }
 }
