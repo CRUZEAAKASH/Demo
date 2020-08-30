@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class QAClickAcademyTest extends BaseClass {
 
-    private WebDriver driver;
+    public WebDriver driver;
     private LandingPage landingPage;
     private LoginPage loginPage;
 
