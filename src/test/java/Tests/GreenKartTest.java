@@ -12,7 +12,7 @@ import java.io.IOException;
 
 public class GreenKartTest {
 
-    WebDriver driver;
+    public WebDriver driver;
     BaseClass baseClass;
 
     /***
