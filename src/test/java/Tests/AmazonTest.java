@@ -7,7 +7,7 @@ import org.testng.annotations.*;
 
 public class AmazonTest extends BaseClass {
 
-    private WebDriver driver;
+    public WebDriver driver;
     private AmazonPages amazonPages;
 
     //@Parameters({"browser"})
