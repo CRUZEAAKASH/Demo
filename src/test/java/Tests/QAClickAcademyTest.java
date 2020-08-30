@@ -27,7 +27,7 @@ public class QAClickAcademyTest extends BaseClass {
     }
 
     @Test(dataProvider = "getDataMethod")
-    public void login(String email, String password) {
+    public void QAClickAcademyLogin(String email, String password) {
         landingPage.clickOnLoginButton();
         loginPage.performLoginOperation(email, password);
     }

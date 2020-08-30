@@ -16,7 +16,7 @@ public class ScreenShot {
         System.out.println("Second Line ");
         File source = takesScreenshot.getScreenshotAs(OutputType.FILE);
         System.out.println("Third Line ");
-        String destinationPath = System.getProperty("user.dir") + "\\reports\\" + testCaseName + ".png";
+        String destinationPath = System.getProperty("user.dir") + "\\target\\reports\\" + testCaseName + ".png";
         System.out.println("Destination path = " + destinationPath);
         FileUtils.copyFile(source, new File(destinationPath));
     }
