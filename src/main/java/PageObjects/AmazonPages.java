@@ -42,18 +42,18 @@ public class AmazonPages {
         searchBox.sendKeys("a thousand splendid suns");
         logger.debug("Entered text in the textBox");
         searchBox.sendKeys(Keys.ARROW_DOWN);
-        logger.info("Press down keys");
+        logger.debug("Press down keys");
         searchBox.submit();
         logger.info("Click the submit button");
         selectItem.click();
-        logger.info("Clicked on button");
+        logger.debug("Clicked on button");
         checkOutButton.click();
         logger.info("Clicked on Checkout Button");
         loginEmail.sendKeys("abc@gmail.com");
-        logger.info("Sent Email Id");
+        logger.debug("Sent Email Id");
         continueButton.click();
         logger.info("Clicked on Continue button");
         password.sendKeys("12345679");
-        logger.info("Some random password sent");
+        logger.debug("Some random password sent");
     }
 }

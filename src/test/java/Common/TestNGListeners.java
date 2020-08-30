@@ -1,8 +1,12 @@
 package Common;
 
+import CommomUtil.ScreenShot;
+import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+
+import java.io.IOException;
 
 // ITestListener interface which implements TestNGListeners
 public class TestNGListeners implements ITestListener {
@@ -20,6 +24,21 @@ public class TestNGListeners implements ITestListener {
     @Override
     public void onTestFailure(ITestResult result) {
         System.out.println("Failed Test Method = " + result.getName());
+        String testMethodName = result.getMethod().getMethodName();
+
+        WebDriver driver = null;
+        try {
+            driver = (WebDriver) result.getTestClass().getRealClass().getDeclaredField("driver").get(result.getInstance());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        System.out.println("Driver = " + driver);
+        System.out.println("Failed Method = " + testMethodName);
+        try {
+            ScreenShot.getScreenShot(driver, testMethodName);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

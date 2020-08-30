@@ -7,7 +7,7 @@ import org.testng.annotations.*;
 
 public class AmazonTest extends BaseClass {
 
-    private WebDriver driver;
+    public WebDriver driver;
     private AmazonPages amazonPages;
 
     //@Parameters({"browser"})
@@ -16,6 +16,7 @@ public class AmazonTest extends BaseClass {
         String browserName = System.getProperty("browser");
         driver = initializeDriver(browserName);
         amazonPages = new AmazonPages(driver);
+        System.out.println("Printing Before Test Method of AmazonTest");
     }
 
     @Test(dataProvider = "getDataMethod")

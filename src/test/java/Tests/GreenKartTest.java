@@ -12,7 +12,7 @@ import java.io.IOException;
 
 public class GreenKartTest {
 
-    WebDriver driver;
+    public WebDriver driver;
     BaseClass baseClass;
 
     /***
@@ -24,6 +24,7 @@ public class GreenKartTest {
         baseClass = new BaseClass();
         String browserName = DataFromPropertiesFile.getValueFromPropertyFile("browser");
         driver = baseClass.initializeDriver(browserName);
+        System.out.println("Printing beforeTest method of GreenKart");
     }
 
     @Test
