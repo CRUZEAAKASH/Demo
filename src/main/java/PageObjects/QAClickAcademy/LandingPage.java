@@ -17,8 +17,9 @@ public class LandingPage {
         PageFactory.initElements(driver, this);
     }
 
-    public void clickOnLoginButton() {
+    public LoginPage clickOnLoginButton() {
         login.click();
+        return new LoginPage(driver);
     }
 
 }

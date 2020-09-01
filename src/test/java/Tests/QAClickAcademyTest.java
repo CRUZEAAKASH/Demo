@@ -2,6 +2,7 @@ package Tests;
 
 import CommomUtil.BaseClass;
 import Common.DataFromPropertiesFile;
+import PageObjects.QAClickAcademy.ForgotPassword;
 import PageObjects.QAClickAcademy.LandingPage;
 import PageObjects.QAClickAcademy.LoginPage;
 import org.openqa.selenium.WebDriver;
@@ -22,14 +23,20 @@ public class QAClickAcademyTest extends BaseClass {
         driver = initializeDriver(browserName);
         launchURL(driver, url);
         landingPage = new LandingPage(driver);
-        loginPage = new LoginPage(driver);
+        loginPage = landingPage.clickOnLoginButton();
         System.out.println("Printing Before Method of QAClickAcademy");
     }
 
     @Test(dataProvider = "getDataMethod")
     public void QAClickAcademyLogin(String email, String password) {
-        landingPage.clickOnLoginButton();
         loginPage.performLoginOperation(email, password);
+    }
+
+    @Test(dataProvider = "getDataMethod")
+    public void QAClickAcademyForgotPassword(String email, String password) {
+        ForgotPassword forgotPassword = loginPage.clickOnForgotPassword();
+        forgotPassword.EnterEmail(email);
+        forgotPassword.clickOnSubmitButton();
     }
 
     @AfterMethod

@@ -57,7 +57,7 @@ public class TestNGListeners implements ITestListener {
 
     @Override
     public void onTestSkipped(ITestResult result) {
-
+        extentTestThreadLocal.get().log(Status.SKIP, result.getMethod().getMethodName() + " skipped")
     }
 
     @Override
