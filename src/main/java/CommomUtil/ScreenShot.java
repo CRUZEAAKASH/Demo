@@ -10,7 +10,7 @@ import java.io.IOException;
 
 public class ScreenShot {
 
-    public static void getScreenShot(WebDriver driver, String testCaseName) throws IOException {
+    public static String getScreenShot(WebDriver driver, String testCaseName) throws IOException {
         System.out.println("First Line ");
         TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
         System.out.println("Second Line ");
@@ -19,5 +19,6 @@ public class ScreenShot {
         String destinationPath = System.getProperty("user.dir") + "\\target\\reports\\" + testCaseName + ".png";
         System.out.println("Destination path = " + destinationPath);
         FileUtils.copyFile(source, new File(destinationPath));
+        return destinationPath;
     }
 }
