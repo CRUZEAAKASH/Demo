@@ -19,6 +19,9 @@ public class LoginPage {
     @FindBy(xpath = "//input[@type='submit']")
     private WebElement login;
 
+    @FindBy(xpath = "//a[@class='link-below-button']")
+    private WebElement forgotPassword;
+
     private WebDriver driver;
 
     private final Logger logger = LogManager.getLogger(LoginPage.class.getName());
@@ -38,6 +41,12 @@ public class LoginPage {
         logger.info("login button is identified");
         login.click();
         logger.debug("login button is clicked");
-
     }
+
+    public ForgotPassword clickOnForgotPassword(){
+        forgotPassword.click();
+        return new ForgotPassword(driver);
+    }
+
+
 }

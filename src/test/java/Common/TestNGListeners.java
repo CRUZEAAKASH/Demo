@@ -16,23 +16,24 @@ public class TestNGListeners implements ITestListener {
 
     ExtentReports extentReports = ExtentReportNG.getReportObject();
     ExtentTest extentTest;
+    ThreadLocal<ExtentTest> extentTestThreadLocal = new ThreadLocal<>();
 
     @Override
     public void onTestStart(ITestResult result) {
         extentTest = extentReports.createTest(result.getMethod().getMethodName());
-
+        extentTestThreadLocal.set(extentTest);
     }
 
     @Override
     public void onTestSuccess(ITestResult result) {
         System.out.println("I successfully executed Listeners success pass code");
-        extentTest.log(Status.PASS, "Test Passed");
+        extentTestThreadLocal.get().log(Status.PASS, "Test Passed");
     }
 
     @Override
     public void onTestFailure(ITestResult result) {
 
-        extentTest.fail(result.getThrowable());
+        extentTestThreadLocal.get().fail(result.getThrowable());
         System.out.println("Failed Test Method = " + result.getName());
         String testMethodName = result.getMethod().getMethodName();
 
@@ -45,7 +46,8 @@ public class TestNGListeners implements ITestListener {
         System.out.println("Driver = " + driver);
         System.out.println("Failed Method = " + testMethodName);
         try {
-            ScreenShot.getScreenShot(driver, testMethodName);
+            extentTestThreadLocal.get().addScreenCaptureFromPath(ScreenShot.getScreenShot(driver, testMethodName), result.getMethod().getMethodName());
+            System.out.println("Executing this method");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -55,7 +57,7 @@ public class TestNGListeners implements ITestListener {
 
     @Override
     public void onTestSkipped(ITestResult result) {
-
+        extentTestThreadLocal.get().log(Status.SKIP, result.getMethod().getMethodName() + " skipped")
     }
 
     @Override
