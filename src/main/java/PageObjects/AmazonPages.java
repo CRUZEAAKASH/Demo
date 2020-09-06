@@ -11,27 +11,22 @@ import org.openqa.selenium.support.PageFactory;
 
 public class AmazonPages {
 
+    private final Logger logger = LogManager.getLogger(AmazonPages.class.getName());
     @FindBy(css = "#twotabsearchtextbox")
     private WebElement searchBox;
-
     @FindBy(xpath = "(//div[@class='a-section aok-relative s-image-fixed-height']/img)[1]")
     private WebElement selectItem;
-
-    @FindBy(css = "input#checkout-button")
-    private WebElement checkOutButton;
-
+    @FindBy(css = "input#add-to-cart-button")
+    private WebElement addToCartButton;
+    @FindBy(xpath = "//a[@id='hlb-ptc-btn-native']")
+    private WebElement checkoutButton;
     @FindBy(css = "input#ap_email")
     private WebElement loginEmail;
-
     @FindBy(css = "#continue")
     private WebElement continueButton;
-
     @FindBy(css = "#ap_password")
     private WebElement password;
-
     private WebDriver driver;
-
-    private final Logger logger = LogManager.getLogger(AmazonPages.class.getName());
 
     public AmazonPages(WebDriver driver) {
         this.driver = driver;
@@ -47,8 +42,11 @@ public class AmazonPages {
         logger.info("Click the submit button");
         selectItem.click();
         logger.debug("Clicked on button");
-        checkOutButton.click();
-        logger.info("Clicked on Checkout Button");
+        addToCartButton.click();
+        logger.info("Clicked on Add To Cart Button");
+        logger.info("Click on Checkout Button");
+        checkoutButton.click();
+        logger.debug("Clicked on checkout button");
         loginEmail.sendKeys("abc@gmail.com");
         logger.debug("Sent Email Id");
         continueButton.click();
