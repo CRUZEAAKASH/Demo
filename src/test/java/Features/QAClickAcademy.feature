@@ -17,3 +17,16 @@ Feature: To test the functionality of QAClick Academy
     Then User enters "abc@qw.com" as Email
     Then User clicks on Submit button
     Then Close the Browser
+
+  Scenario: To Test Forgot Password Functionality with DataTable Concept
+    Then User clicks on Forgot Password
+    Then User enters Email
+      | abc@qw.com |
+    Then User clicks on Submit button
+    Then Close the Browser
+
+  Scenario: To test login functionality with DataTable Concept
+    Then User enters UserName and Password
+      | abc@qw.com | 123456 |
+    Then Close the Browser
+
