@@ -1,6 +1,7 @@
 package Tests;
 
 import CommomUtil.BaseClass;
+import CommomUtil.WebDriverFactory;
 import Common.DataFromPropertiesFile;
 import PageObjects.QAClickAcademy.ForgotPassword;
 import PageObjects.QAClickAcademy.LandingPage;
@@ -21,10 +22,11 @@ public class QAClickAcademyTest extends BaseClass {
     public void setup(String browserName) throws IOException {
         String url = DataFromPropertiesFile.getValueFromPropertyFile("url_qaClickAcademy");
         driver = initializeDriver(browserName);
+        WebDriverFactory.setWebDriver(driver);
         launchURL(driver, url);
-        landingPage = new LandingPage(driver);
+        landingPage = new LandingPage();
         loginPage = landingPage.clickOnLoginButton();
-        System.out.println("Printing Before Method of QAClickAcademy");
+        System.out.println("Printing Before Method of QAClickAcademy " + Thread.currentThread().getName());
     }
 
     @Test(dataProvider = "getDataMethod")
@@ -50,7 +52,7 @@ public class QAClickAcademyTest extends BaseClass {
         data[0][0] = "abc@qw.com";
         data[0][1] = "123456";
 
-        data[1][0] = "restricteduser";
+        data[1][0] = "restrictedUser";
         data[1][1] = "password";
         return data;
     }

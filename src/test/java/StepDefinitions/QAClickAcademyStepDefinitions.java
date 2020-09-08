@@ -1,11 +1,14 @@
 package StepDefinitions;
 
 import CommomUtil.BaseClass;
+import CommomUtil.WebDriverFactory;
 import Common.DataFromPropertiesFile;
 import PageObjects.QAClickAcademy.ForgotPassword;
 import PageObjects.QAClickAcademy.LandingPage;
 import PageObjects.QAClickAcademy.LoginPage;
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.WebDriver;
@@ -19,12 +22,17 @@ public class QAClickAcademyStepDefinitions extends BaseClass {
     private LoginPage loginPage;
     private ForgotPassword forgotPassword;
 
-    @Given("^User is on Home Page$")
-    public void user_is_on_home_page() throws IOException {
+    @Before
+    public void beforeSetup() throws IOException {
         String url = DataFromPropertiesFile.getValueFromPropertyFile("url_qaClickAcademy");
         this.driver = initializeDriver("chrome");
+        WebDriverFactory.setWebDriver(driver);
         launchURL(driver, url);
-        landingPage = new LandingPage(driver);
+    }
+
+    @Given("^User is on Home Page$")
+    public void user_is_on_home_page() {
+        landingPage = new LandingPage();
     }
 
     @Then("^User clicks on Login Button$")
@@ -39,7 +47,7 @@ public class QAClickAcademyStepDefinitions extends BaseClass {
     }
 
     @Then("^User enters UserName and Password$")
-    public void user_enters_username_and_password(DataTable dataTable) throws Throwable {
+    public void user_enters_username_and_password(DataTable dataTable) {
         String email = dataTable.asList().get(0);
         String password = dataTable.asList().get(1);
         loginPage.performLoginOperation(email, password);
@@ -59,7 +67,7 @@ public class QAClickAcademyStepDefinitions extends BaseClass {
     }
 
     @Then("^User enters Email$")
-    public void user_enters_email(DataTable dataTable) throws Throwable {
+    public void user_enters_email(DataTable dataTable) {
         forgotPassword.EnterEmail(dataTable.toString());
     }
 
@@ -73,5 +81,9 @@ public class QAClickAcademyStepDefinitions extends BaseClass {
         tearDownDriver(driver);
     }
 
+    @After
+    public void afterSetup() {
+        System.out.println("Nothing to do here");
+    }
 
 }

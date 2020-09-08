@@ -1,5 +1,6 @@
 package PageObjects.QAClickAcademy;
 
+import CommomUtil.WebDriverFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,10 +14,10 @@ public class ForgotPassword {
     @FindBy(xpath = "//input[@type='submit']")
     private WebElement submitButton;
 
-    private WebDriver driver;
+    private final WebDriver driver = WebDriverFactory.getDriver();
 
-    public ForgotPassword(WebDriver driver) {
-        this.driver = driver;
+    public ForgotPassword() {
+        //this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 

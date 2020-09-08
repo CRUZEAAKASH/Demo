@@ -1,5 +1,6 @@
 package PageObjects;
 
+import CommomUtil.WebDriverFactory;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Keys;
@@ -26,32 +27,33 @@ public class AmazonPages {
     private WebElement continueButton;
     @FindBy(css = "#ap_password")
     private WebElement password;
-    private WebDriver driver;
 
-    public AmazonPages(WebDriver driver) {
-        this.driver = driver;
+    private final WebDriver driver = WebDriverFactory.getDriver();
+
+    public AmazonPages() {
+        //this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
     public void amazonOperations() {
         searchBox.sendKeys("a thousand splendid suns");
-        logger.debug("Entered text in the textBox");
+        logger.debug("Entered text in the textBox" + Thread.currentThread().getName());
         searchBox.sendKeys(Keys.ARROW_DOWN);
-        logger.debug("Press down keys");
+        logger.debug("Press down keys" + Thread.currentThread().getName());
         searchBox.submit();
-        logger.info("Click the submit button");
+        logger.info("Click the submit button" + Thread.currentThread().getName());
         selectItem.click();
-        logger.debug("Clicked on button");
+        logger.debug("Clicked on button" + Thread.currentThread().getName());
         addToCartButton.click();
-        logger.info("Clicked on Add To Cart Button");
-        logger.info("Click on Checkout Button");
+        logger.info("Clicked on Add To Cart Button" + Thread.currentThread().getName());
+        logger.info("Click on Checkout Button" + Thread.currentThread().getName());
         checkoutButton.click();
-        logger.debug("Clicked on checkout button");
+        logger.debug("Clicked on checkout button" + Thread.currentThread().getName());
         loginEmail.sendKeys("abc@gmail.com");
-        logger.debug("Sent Email Id");
+        logger.debug("Sent Email Id" + Thread.currentThread().getName());
         continueButton.click();
-        logger.info("Clicked on Continue button");
+        logger.info("Clicked on Continue button" + Thread.currentThread().getName());
         password.sendKeys("12345679");
-        logger.debug("Some random password sent");
+        logger.debug("Some random password sent" + Thread.currentThread().getName());
     }
 }

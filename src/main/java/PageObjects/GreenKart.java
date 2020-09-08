@@ -1,5 +1,6 @@
 package PageObjects;
 
+import CommomUtil.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,7 +16,9 @@ import static java.lang.System.exit;
 
 public class GreenKart {
 
-    public static void greenKartOperation(WebDriver driver) throws InterruptedException {
+    private static final WebDriver driver = WebDriverFactory.getDriver();
+
+    public static void greenKartOperation() throws InterruptedException {
         String[] itemsNeeded = {"Cucumber", "Broccoli", "Beetroot"};
         //List itemsNeededList = Arrays.asList(itemsNeeded);
         List<String> itemsNeededList = new LinkedList<>(Arrays.asList(itemsNeeded));
@@ -23,7 +26,7 @@ public class GreenKart {
         for (int i = 0; i < products.size(); i++) {
             final String vegName = products.get(i).getText().split(" ")[0];
             if (itemsNeededList.contains(vegName)) {
-                System.out.println("Veg Name = " + vegName);
+                System.out.println("Veg Name = " + vegName + "    " + Thread.currentThread().getName());
                 driver.findElements(By.xpath("//div[@class='product-action']/button")).get(i).click();
                 itemsNeededList.remove(vegName);
                 if (itemsNeededList.size() == 0) {
@@ -39,7 +42,7 @@ public class GreenKart {
 
         String promoText = driver.findElement(By.className("promoInfo")).getText();
         if (promoText.equals("Code applied ..!")) {
-            System.out.println("True");
+            System.out.println("True    " + Thread.currentThread().getName());
         } else {
             exit(1);
         }
