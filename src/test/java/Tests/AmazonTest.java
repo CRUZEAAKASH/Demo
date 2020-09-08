@@ -1,9 +1,13 @@
 package Tests;
 
 import CommomUtil.BaseClass;
+import CommomUtil.WebDriverFactory;
 import PageObjects.AmazonPages;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 
 public class AmazonTest extends BaseClass {
 
@@ -15,8 +19,9 @@ public class AmazonTest extends BaseClass {
     public void settingUpDriver() {
         String browserName = System.getProperty("browser");
         driver = initializeDriver(browserName);
-        amazonPages = new AmazonPages(driver);
-        System.out.println("Printing Before Test Method of AmazonTest");
+        WebDriverFactory.setWebDriver(driver);
+        amazonPages = new AmazonPages();
+        System.out.println("Printing Before Test Method of AmazonTest " + Thread.currentThread().getName());
     }
 
     @Test(dataProvider = "getDataMethod")
@@ -28,7 +33,7 @@ public class AmazonTest extends BaseClass {
 
     @AfterTest
     public void tearDownDriver() {
-        System.out.println("Executing Tear Down");
+        System.out.println("Executing Tear Down " + Thread.currentThread().getName());
         tearDownDriver(driver);
     }
 

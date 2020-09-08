@@ -1,5 +1,6 @@
 package PageObjects.QAClickAcademy;
 
+import CommomUtil.WebDriverFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,16 +11,16 @@ public class LandingPage {
     @FindBy(xpath = "//a/span[text()='Login']")
     private WebElement login;
 
-    private WebDriver driver;
+    private final WebDriver driver = WebDriverFactory.getDriver();
 
-    public LandingPage(WebDriver driver) {
-        this.driver = driver;
+    public LandingPage() {
+        //this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
     public LoginPage clickOnLoginButton() {
         login.click();
-        return new LoginPage(driver);
+        return new LoginPage();
     }
 
 }

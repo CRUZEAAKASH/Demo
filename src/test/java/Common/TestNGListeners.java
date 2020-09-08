@@ -26,7 +26,7 @@ public class TestNGListeners implements ITestListener {
 
     @Override
     public void onTestSuccess(ITestResult result) {
-        System.out.println("I successfully executed Listeners success pass code");
+        System.out.println("I successfully executed Listeners success pass code " + Thread.currentThread().getName());
         extentTestThreadLocal.get().log(Status.PASS, "Test Passed");
     }
 
@@ -34,7 +34,7 @@ public class TestNGListeners implements ITestListener {
     public void onTestFailure(ITestResult result) {
 
         extentTestThreadLocal.get().fail(result.getThrowable());
-        System.out.println("Failed Test Method = " + result.getName());
+        System.out.println("Failed Test Method = " + result.getName() + " "  + Thread.currentThread().getName());
         String testMethodName = result.getMethod().getMethodName();
 
         WebDriver driver = null;
@@ -43,11 +43,11 @@ public class TestNGListeners implements ITestListener {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        System.out.println("Driver = " + driver);
-        System.out.println("Failed Method = " + testMethodName);
+        System.out.println("Driver = " + driver + " " + Thread.currentThread().getName());
+        System.out.println("Failed Method = " + testMethodName + " " + Thread.currentThread().getName());
         try {
             extentTestThreadLocal.get().addScreenCaptureFromPath(ScreenShot.getScreenShot(driver, testMethodName), result.getMethod().getMethodName());
-            System.out.println("Executing this method");
+            System.out.println("Executing this method " + Thread.currentThread().getName());
         } catch (IOException e) {
             e.printStackTrace();
         }

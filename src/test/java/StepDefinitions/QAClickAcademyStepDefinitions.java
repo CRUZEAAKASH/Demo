@@ -29,8 +29,8 @@ public class QAClickAcademyStepDefinitions extends BaseClass {
     }
 
     @Given("^User is on Home Page$")
-    public void user_is_on_home_page() throws IOException {
-        landingPage = new LandingPage(driver);
+    public void user_is_on_home_page()  {
+        landingPage = new LandingPage();
     }
 
     @Then("^User clicks on Login Button$")
@@ -45,7 +45,7 @@ public class QAClickAcademyStepDefinitions extends BaseClass {
     }
 
     @Then("^User enters UserName and Password$")
-    public void user_enters_username_and_password(DataTable dataTable) throws Throwable {
+    public void user_enters_username_and_password(DataTable dataTable) {
         String email = dataTable.asList().get(0);
         String password = dataTable.asList().get(1);
         loginPage.performLoginOperation(email, password);
@@ -65,7 +65,7 @@ public class QAClickAcademyStepDefinitions extends BaseClass {
     }
 
     @Then("^User enters Email$")
-    public void user_enters_email(DataTable dataTable) throws Throwable {
+    public void user_enters_email(DataTable dataTable)  {
         forgotPassword.EnterEmail(dataTable.toString());
     }
 

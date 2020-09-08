@@ -1,6 +1,7 @@
 package Tests;
 
 import CommomUtil.BaseClass;
+import CommomUtil.WebDriverFactory;
 import Common.DataFromPropertiesFile;
 import PageObjects.GreenKart;
 import org.openqa.selenium.WebDriver;
@@ -24,24 +25,25 @@ public class GreenKartTest {
         baseClass = new BaseClass();
         String browserName = DataFromPropertiesFile.getValueFromPropertyFile("browser");
         driver = baseClass.initializeDriver(browserName);
-        System.out.println("Printing beforeTest method of GreenKart");
+        WebDriverFactory.setWebDriver(driver);
+        System.out.println("Printing beforeTest method of GreenKart " + Thread.currentThread().getName());
     }
 
     @Test
     public void greenKartTestToBeExcluded() {
-        System.out.println("Dummy Code as this method will not be Executed");
+        System.out.println("Dummy Code as this method will not be Executed " + Thread.currentThread().getName());
     }
 
     @Test(enabled = true)
     public void greenKartTest() throws InterruptedException {
         baseClass.launchURL(driver, "https://rahulshettyacademy.com/seleniumPractise");
         baseClass.getTitle(driver);
-        GreenKart.greenKartOperation(driver);
+        GreenKart.greenKartOperation();
     }
 
     @AfterTest
     public void tearDownDriver() {
-        System.out.println("Executing Tear Down");
+        System.out.println("Executing Tear Down " + Thread.currentThread().getName());
         baseClass.tearDownDriver(driver);
     }
 }
