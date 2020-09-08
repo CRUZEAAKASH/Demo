@@ -1,6 +1,7 @@
 package StepDefinitions;
 
 import CommomUtil.BaseClass;
+import CommomUtil.WebDriverFactory;
 import Common.DataFromPropertiesFile;
 import PageObjects.QAClickAcademy.ForgotPassword;
 import PageObjects.QAClickAcademy.LandingPage;
@@ -25,11 +26,12 @@ public class QAClickAcademyStepDefinitions extends BaseClass {
     public void beforeSetup() throws IOException {
         String url = DataFromPropertiesFile.getValueFromPropertyFile("url_qaClickAcademy");
         this.driver = initializeDriver("chrome");
+        WebDriverFactory.setWebDriver(driver);
         launchURL(driver, url);
     }
 
     @Given("^User is on Home Page$")
-    public void user_is_on_home_page()  {
+    public void user_is_on_home_page() {
         landingPage = new LandingPage();
     }
 
@@ -65,7 +67,7 @@ public class QAClickAcademyStepDefinitions extends BaseClass {
     }
 
     @Then("^User enters Email$")
-    public void user_enters_email(DataTable dataTable)  {
+    public void user_enters_email(DataTable dataTable) {
         forgotPassword.EnterEmail(dataTable.toString());
     }
 
