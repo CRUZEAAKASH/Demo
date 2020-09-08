@@ -6,6 +6,8 @@ import PageObjects.QAClickAcademy.ForgotPassword;
 import PageObjects.QAClickAcademy.LandingPage;
 import PageObjects.QAClickAcademy.LoginPage;
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.WebDriver;
@@ -19,11 +21,15 @@ public class QAClickAcademyStepDefinitions extends BaseClass {
     private LoginPage loginPage;
     private ForgotPassword forgotPassword;
 
-    @Given("^User is on Home Page$")
-    public void user_is_on_home_page() throws IOException {
+    @Before
+    public void beforeSetup() throws IOException {
         String url = DataFromPropertiesFile.getValueFromPropertyFile("url_qaClickAcademy");
         this.driver = initializeDriver("chrome");
         launchURL(driver, url);
+    }
+
+    @Given("^User is on Home Page$")
+    public void user_is_on_home_page() throws IOException {
         landingPage = new LandingPage(driver);
     }
 
@@ -73,5 +79,9 @@ public class QAClickAcademyStepDefinitions extends BaseClass {
         tearDownDriver(driver);
     }
 
+    @After
+    public void afterSetup() {
+        System.out.println("Nothing to do here");
+    }
 
 }
