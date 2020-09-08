@@ -5,6 +5,7 @@ import Common.DataFromPropertiesFile;
 import PageObjects.QAClickAcademy.ForgotPassword;
 import PageObjects.QAClickAcademy.LandingPage;
 import PageObjects.QAClickAcademy.LoginPage;
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.WebDriver;
@@ -37,6 +38,14 @@ public class QAClickAcademyStepDefinitions extends BaseClass {
         loginPage.performLoginOperation(email, password);
     }
 
+    @Then("^User enters UserName and Password$")
+    public void user_enters_username_and_password(DataTable dataTable) throws Throwable {
+        String email = dataTable.asList().get(0);
+        String password = dataTable.asList().get(1);
+        loginPage.performLoginOperation(email, password);
+    }
+
+
     @Then("^User clicks on Forgot Password$")
     public void user_clicks_on_forgot_password() {
         forgotPassword = loginPage.clickOnForgotPassword();
@@ -49,6 +58,11 @@ public class QAClickAcademyStepDefinitions extends BaseClass {
 
     }
 
+    @Then("^User enters Email$")
+    public void user_enters_email(DataTable dataTable) throws Throwable {
+        forgotPassword.EnterEmail(dataTable.toString());
+    }
+
     @Then("^User clicks on Submit button$")
     public void user_clicks_on_submit_button() {
         forgotPassword.clickOnSubmitButton();
@@ -58,4 +72,6 @@ public class QAClickAcademyStepDefinitions extends BaseClass {
     public void close_the_browser() {
         tearDownDriver(driver);
     }
+
+
 }
