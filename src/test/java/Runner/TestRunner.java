@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 import org.testng.annotations.DataProvider;
 
 
-@RunWith(Cucumber.class)
+//@RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/java/Features"
         , glue = {"StepDefinitions"}
