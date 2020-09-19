@@ -1,0 +1,497 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-09-19T06:04:52.421Z",
+        "line": 3,
+        "name": "To search a novel, add it to basket and reach till login Page",
+        "description": "",
+        "id": "to-test-the-functionality-of-amazon;to-search-a-novel--add-it-to-basket-and-reach-till-login-page",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 54842000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "User lands on Amazon Home Page",
+            "match": {
+              "location": "StepDefinitions.Amazon.HomePageStepDefinitions.user_lands_on_amazon_home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 11169000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User searches for \"a thousand splendid suns\" book",
+            "match": {
+              "arguments": [
+                {
+                  "val": "a thousand splendid suns",
+                  "offset": 19
+                }
+              ],
+              "location": "StepDefinitions.Amazon.HomePageStepDefinitions.user_searches_for_something_book(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10086000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User select the first book from the list",
+            "match": {
+              "location": "StepDefinitions.Amazon.ItemsListPageSteps.user_select_the_first_book_from_the_list()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2927000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User clicks on \"Add to Cart\" button to add add items into cart",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Add to Cart",
+                  "offset": 16
+                }
+              ],
+              "location": "StepDefinitions.Amazon.ItemDetailsStepDefinition.user_clicks_on_button_to_add_add_items_into_cart(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5903000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User clicks on \"Proceed to checkout\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Proceed to checkout",
+                  "offset": 16
+                }
+              ],
+              "location": "StepDefinitions.Amazon.ShoppingCartPageStepDefinitions.user_clicks_on_something_button(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 7142000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User enters EmailId",
+            "match": {
+              "location": "StepDefinitions.Amazon.SignInPageStepDefinitions.user_enters_emailid()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 243000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User enters password",
+            "match": {
+              "location": "StepDefinitions.Amazon.SignInPageStepDefinitions.user_enters_password()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 950000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Close the Browser",
+            "match": {
+              "location": "StepDefinitions.QAClickAcademy.LandingPageSteps.close_the_browser()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "To test the functionality of Amazon",
+    "description": "",
+    "id": "to-test-the-functionality-of-amazon",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/Features/Amazon.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "User is on Logged in Page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 58064000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "User is on Home Page",
+            "match": {
+              "location": "StepDefinitions.QAClickAcademy.LandingPageSteps.user_is_on_home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5867000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User clicks on Login Button",
+            "match": {
+              "location": "StepDefinitions.QAClickAcademy.LandingPageSteps.user_clicks_on_login_button()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-09-19T06:04:52.424Z",
+        "line": 13,
+        "name": "To test login functionality",
+        "description": "",
+        "id": "to-test-the-functionality-of-qaclick-academy;to-test-login-functionality;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3752000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User enters \"abc@qw.com\" as UserName and \"123456\" as Password",
+            "match": {
+              "arguments": [
+                {
+                  "val": "abc@qw.com",
+                  "offset": 13
+                },
+                {
+                  "val": "123456",
+                  "offset": 42
+                }
+              ],
+              "location": "StepDefinitions.QAClickAcademy.LoginPageSteps.user_enters_something_as_username_and_something_as_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1517000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Close the Browser",
+            "match": {
+              "location": "StepDefinitions.QAClickAcademy.LandingPageSteps.close_the_browser()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "User is on Logged in Page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 62507000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "User is on Home Page",
+            "match": {
+              "location": "StepDefinitions.QAClickAcademy.LandingPageSteps.user_is_on_home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element \u003cspan\u003e...\u003c/span\u003e is not clickable at point (1249, 15). Other element would receive the click: \u003cdiv class\u003d\"listbuilder-popup-content\"\u003e...\u003c/div\u003e\n  (Session info: chrome\u003d85.0.4183.102)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027RMM-PN-LT-149\u0027, ip: \u0027169.254.231.101\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_231\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\\Users\\AAKASH~1.SHI\\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:58739}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: e5e5cb173e41b3a4579f37b7caf45c8c\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)\r\n\tat com.sun.proxy.$Proxy30.click(Unknown Source)\r\n\tat PageObjects.QAClickAcademy.LandingPage.clickOnLoginButton(LandingPage.java:22)\r\n\tat StepDefinitions.QAClickAcademy.LandingPageSteps.user_clicks_on_login_button(LandingPageSteps.java:39)\r\n\tat ✽.User clicks on Login Button(file:///C:/Users/aakash.shinghal/IntellijWorkspace_1/Demonstration/src/test/java/Features/QAClickAcademy.feature:5)\r\n",
+              "duration": 1998000000,
+              "status": "failed"
+            },
+            "line": 5,
+            "name": "User clicks on Login Button",
+            "match": {
+              "location": "StepDefinitions.QAClickAcademy.LandingPageSteps.user_clicks_on_login_button()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-09-19T06:04:52.423Z",
+        "line": 15,
+        "name": "To Test Forgot Password Functionality",
+        "description": "",
+        "id": "to-test-the-functionality-of-qaclick-academy;to-test-forgot-password-functionality",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 16,
+            "name": "User clicks on Forgot Password",
+            "match": {
+              "location": "StepDefinitions.QAClickAcademy.LoginPageSteps.user_clicks_on_forgot_password()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 17,
+            "name": "User enters \"abc@qw.com\" as Email",
+            "match": {
+              "arguments": [
+                {
+                  "val": "abc@qw.com",
+                  "offset": 13
+                }
+              ],
+              "location": "StepDefinitions.QAClickAcademy.ForgotPasswordSteps.user_enters_something_as_email(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 18,
+            "name": "User clicks on Submit button",
+            "match": {
+              "location": "StepDefinitions.QAClickAcademy.ForgotPasswordSteps.user_clicks_on_submit_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 19,
+            "name": "Close the Browser",
+            "match": {
+              "location": "StepDefinitions.QAClickAcademy.LandingPageSteps.close_the_browser()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "User is on Logged in Page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 57499000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "User is on Home Page",
+            "match": {
+              "location": "StepDefinitions.QAClickAcademy.LandingPageSteps.user_is_on_home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4789000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User clicks on Login Button",
+            "match": {
+              "location": "StepDefinitions.QAClickAcademy.LandingPageSteps.user_clicks_on_login_button()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-09-19T06:04:52.413Z",
+        "line": 21,
+        "name": "To Test Forgot Password Functionality with DataTable Concept",
+        "description": "",
+        "id": "to-test-the-functionality-of-qaclick-academy;to-test-forgot-password-functionality-with-datatable-concept",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1731000000,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "User clicks on Forgot Password",
+            "match": {
+              "location": "StepDefinitions.QAClickAcademy.LoginPageSteps.user_clicks_on_forgot_password()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 730000000,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "User enters Email",
+            "match": {
+              "location": "StepDefinitions.QAClickAcademy.ForgotPasswordSteps.user_enters_email(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "abc@qw.com"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 755000000,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "User clicks on Submit button",
+            "match": {
+              "location": "StepDefinitions.QAClickAcademy.ForgotPasswordSteps.user_clicks_on_submit_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3782000000,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "Close the Browser",
+            "match": {
+              "location": "StepDefinitions.QAClickAcademy.LandingPageSteps.close_the_browser()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "User is on Logged in Page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 57915000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "User is on Home Page",
+            "match": {
+              "location": "StepDefinitions.QAClickAcademy.LandingPageSteps.user_is_on_home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5559000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User clicks on Login Button",
+            "match": {
+              "location": "StepDefinitions.QAClickAcademy.LandingPageSteps.user_clicks_on_login_button()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-09-19T06:04:52.415Z",
+        "line": 28,
+        "name": "To test login functionality with DataTable Concept",
+        "description": "",
+        "id": "to-test-the-functionality-of-qaclick-academy;to-test-login-functionality-with-datatable-concept",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1360000000,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "User enters UserName and Password",
+            "match": {
+              "location": "StepDefinitions.QAClickAcademy.LoginPageSteps.user_enters_username_and_password(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "abc@qw.com",
+                  "123456"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3498000000,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "Close the Browser",
+            "match": {
+              "location": "StepDefinitions.QAClickAcademy.LandingPageSteps.close_the_browser()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "To test the functionality of QAClick Academy",
+    "description": "",
+    "id": "to-test-the-functionality-of-qaclick-academy",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/Features/QAClickAcademy.feature",
+    "tags": []
+  }
+]
