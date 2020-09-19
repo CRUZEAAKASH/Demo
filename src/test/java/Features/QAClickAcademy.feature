@@ -1,3 +1,4 @@
+@QAClickAcademy
 Feature: To test the functionality of QAClick Academy
 
   Background: User is on Logged in Page
