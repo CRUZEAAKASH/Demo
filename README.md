@@ -56,7 +56,12 @@
 5. Implemented TestNg Listener -> ITestListener
 6. Implemented Parallel Test Execution by Mentioning parallel thread count in testng.xml
 7. Accessed methods of base class directly by inheriting the base class
-8. Accessed methods of base class by making an object of base class 
+8. Accessed methods of base class by making an object of base class
+
+
+## Cucumber
+1. To run the Cucumber Tests using tags mechanism from command line. Use this command  
+**mvn clean test -Dcucumber.filter.tags="@QAClickAcademy or @Amazon"** 
 
 
 
